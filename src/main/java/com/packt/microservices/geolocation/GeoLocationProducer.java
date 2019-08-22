@@ -32,7 +32,7 @@ public class GeoLocationProducer {
 
         for (GeoLocation geolocation : geolocations) {
             System.out.println("Sending geolocation [" + geolocation.toString() + "]");
-            ProducerRecord<String, String> record = new ProducerRecord<>("geolocations",geolocation.toString());
+            ProducerRecord<String, String> record = new ProducerRecord<>("geolocationStreams",geolocation.toString());
             producer.send(record);
         }
         producer.close();
