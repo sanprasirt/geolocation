@@ -7,6 +7,7 @@ import org.springframework.boot.SpringApplication;
 public class GeoLocationApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(GeoLocationApplication.class, args);
+		new Thread(new GeoLocationConsumer()).start();
 	}	
 
 }
